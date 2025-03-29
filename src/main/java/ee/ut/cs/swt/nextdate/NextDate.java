@@ -59,15 +59,15 @@ public class NextDate {
 		else if(isDecember(month))
 		{
 			// To fix "Fault 1", uncomment the correct line 63 and comment out the incorrect line 62.
-			if(day <= 31) //if the day is not 31, just increment the day
-//			if (day < 31) //if the day is not 31, just increment the next day
+//			if(day <= 31) //if the day is not 31, just increment the day
+			if (day < 31) //if the day is not 31, just increment the next day
 				tomorrowDay = day +1;
 			else { //day is 31, reset the day and month to 1 and increment the year
 				tomorrowDay = 1;
 				tomorrowMonth = 1;
 			// To fix "Fault 2", uncomment the correct line 70 and comment out the incorrect line 69
-				if(year == 2022) //make sure the next year is within the permissible range
-//				if(year == 2021) //make sure the next year is within the permissible range
+//				if(year == 2022) //make sure the next year is within the permissible range
+				if(year == 2021) //make sure the next year is within the permissible range
 					return "Invalid Next Year";
 				else  //it was a permissible year - go ahead and increment the year
 					tomorrowYear = year +1;
